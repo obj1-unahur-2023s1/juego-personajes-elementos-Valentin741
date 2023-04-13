@@ -1,0 +1,14 @@
+import jugador.*
+import armas.*
+import jugadoresPersonajes.*
+import elementos.*
+
+test "Luisa cn Mario bros se encuentra a aurora en el castillo" {
+	luisa.personajeActivo(mario)
+	luisa.aparece(aurora)
+	luisa.aparece(castillo)
+	assert.equals(170, castillo.nivelDeDefensa())
+	assert.equals(45, mario.valorRecolectado())
+	assert.that(mario.estaFeliz())
+	assert.equals(castillo, mario.ultimoElementoEncontrado())
+}

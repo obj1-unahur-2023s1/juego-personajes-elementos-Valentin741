@@ -1,3 +1,4 @@
+# Test push
 # Juego con personajes y elementos
  
 Nos piden modelar un juego en el que cada jugador maneja un conjunto de personajes (p.ej. guerreros, trabajadores, sacerdotes). En el juego hay distintos elementos (p.ej. casas, animales, ríos). Cuando un personaje se encuentra con un elemento, hace cosas que pueden afectar a ambos.
