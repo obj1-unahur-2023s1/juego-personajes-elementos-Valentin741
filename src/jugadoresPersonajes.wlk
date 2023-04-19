@@ -3,7 +3,8 @@ import elementos.*
 
 object floki {
 	var arma = ballesta
-	method arma(armaNueva) {arma = armaNueva}
+	method armaEquipada() = arma
+	method cambiarArma(armaNueva) {arma = armaNueva}
 	method encontrar(elemento){
 		if(arma.estaCargada()){
 			elemento.recibirAtaque(arma.potencia())

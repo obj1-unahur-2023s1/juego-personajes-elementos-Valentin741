@@ -3,12 +3,39 @@ import armas.*
 import jugadoresPersonajes.*
 import elementos.*
 
-test "Luisa cn Mario bros se encuentra a aurora en el castillo" {
-	luisa.personajeActivo(mario)
+test "Luisa con Mario bros se encuentra a aurora en el castillo" {
+	luisa.asignarPersonaje(mario)
 	luisa.aparece(aurora)
 	luisa.aparece(castillo)
 	assert.equals(170, castillo.nivelDeDefensa())
 	assert.equals(45, mario.valorRecolectado())
 	assert.that(mario.estaFeliz())
 	assert.equals(castillo, mario.ultimoElementoEncontrado())
+}
+
+test "test2" {
+	luisa.asignarPersonaje(mario)
+	luisa.aparece(tipa)
+	luisa.asignarPersonaje(floki)
+	floki.cambiarArma(jabalina)
+	luisa.aparece(aurora)
+	luisa.aparece(castillo)
+	assert.equals(16, mario.valorRecolectado())
+	assert.equals(9, tipa.altura())
+	assert.that(not mario.estaFeliz())
+	assert.that(not aurora.estaViva())
+	assert.equals(150, castillo.nivelDeDefensa())
+	assert.that(not floki.armaEquipada().estaCargada())
+}
+
+test "test3" {
+	luisa.asignarPersonaje(floki)
+	floki.cambiarArma(ballesta)
+	luisa.aparece(aurora)
+	luisa.aparece(castillo)
+	assert.equals(0, mario.valorRecolectado())
+	assert.that(aurora.estaViva())
+	assert.equals(146, castillo.nivelDeDefensa())
+	assert.that(floki.armaEquipada().estaCargada())
+	assert.equals(8, ballesta.flechasRestantes())
 }

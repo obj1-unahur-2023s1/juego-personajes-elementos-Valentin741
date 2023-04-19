@@ -23,6 +23,7 @@ object aurora {
 	}
 	method recibirTrabajo(){}
 	method valorQueOtorga() = 15
+	method estaViva() = estaViva
 }
 
 object tipa {

@@ -7,6 +7,7 @@ object ballesta {
 		}
 	}
 	method estaCargada() = cantDeFlechas > 0
+	method flechasRestantes() = cantDeFlechas
 }
 
 object jabalina {
